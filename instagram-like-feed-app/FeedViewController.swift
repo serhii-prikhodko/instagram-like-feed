@@ -13,9 +13,15 @@ class FeedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let subview = UIView()
+        view.addSubview(subview)
+        subview.snp.makeConstraints { (make) in
+            make.top.equalTo(view)
+            make.bottom.equalTo(view)
+            make.left.equalTo(view)
+            make.right.equalTo(view)
+        }
+        subview.backgroundColor = .white
     }
-
-
 }
 
