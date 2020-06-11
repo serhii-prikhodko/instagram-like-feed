@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SnapKit
 
-class ViewController: UIViewController {
+class FeedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -3,17 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1AD17BE62492907800B1112E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD17BE52492907800B1112E /* AppDelegate.swift */; };
 		1AD17BE82492907800B1112E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD17BE72492907800B1112E /* SceneDelegate.swift */; };
-		1AD17BEA2492907800B1112E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD17BE92492907800B1112E /* ViewController.swift */; };
+		1AD17BEA2492907800B1112E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD17BE92492907800B1112E /* FeedViewController.swift */; };
 		1AD17BED2492907800B1112E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD17BEB2492907800B1112E /* Main.storyboard */; };
 		1AD17BEF2492907C00B1112E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD17BEE2492907C00B1112E /* Assets.xcassets */; };
 		1AD17BF22492907C00B1112E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD17BF02492907C00B1112E /* LaunchScreen.storyboard */; };
 		1AD17BFD2492907D00B1112E /* instagram_like_feed_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD17BFC2492907D00B1112E /* instagram_like_feed_appTests.swift */; };
+		A8D58A8F8910F736E58C09CD /* Pods_instagram_like_feed_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 778900C8DF91E20D1F40C6BD /* Pods_instagram_like_feed_app.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +28,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		142325198E00D2AA62D1995F /* Pods-instagram-like-feed-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram-like-feed-app.release.xcconfig"; path = "Target Support Files/Pods-instagram-like-feed-app/Pods-instagram-like-feed-app.release.xcconfig"; sourceTree = "<group>"; };
 		1AD17BE22492907800B1112E /* instagram-like-feed-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "instagram-like-feed-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD17BE52492907800B1112E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AD17BE72492907800B1112E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1AD17BE92492907800B1112E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1AD17BE92492907800B1112E /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		1AD17BEC2492907800B1112E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1AD17BEE2492907C00B1112E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AD17BF12492907C00B1112E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +40,8 @@
 		1AD17BF82492907D00B1112E /* instagram-like-feed-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "instagram-like-feed-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD17BFC2492907D00B1112E /* instagram_like_feed_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instagram_like_feed_appTests.swift; sourceTree = "<group>"; };
 		1AD17BFE2492907D00B1112E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		778900C8DF91E20D1F40C6BD /* Pods_instagram_like_feed_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_like_feed_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC2118D95D75B8DC78316FD7 /* Pods-instagram-like-feed-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram-like-feed-app.debug.xcconfig"; path = "Target Support Files/Pods-instagram-like-feed-app/Pods-instagram-like-feed-app.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8D58A8F8910F736E58C09CD /* Pods_instagram_like_feed_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +63,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C049D9AAB0512092EBF4FFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				778900C8DF91E20D1F40C6BD /* Pods_instagram_like_feed_app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1AD17BD92492907800B1112E = {
 			isa = PBXGroup;
 			children = (
 				1AD17BE42492907800B1112E /* instagram-like-feed-app */,
 				1AD17BFB2492907D00B1112E /* instagram-like-feed-appTests */,
 				1AD17BE32492907800B1112E /* Products */,
+				868C93D498B9B42E5DB5CFD3 /* Pods */,
+				0C049D9AAB0512092EBF4FFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,7 +96,7 @@
 			children = (
 				1AD17BE52492907800B1112E /* AppDelegate.swift */,
 				1AD17BE72492907800B1112E /* SceneDelegate.swift */,
-				1AD17BE92492907800B1112E /* ViewController.swift */,
+				1AD17BE92492907800B1112E /* FeedViewController.swift */,
 				1AD17BEB2492907800B1112E /* Main.storyboard */,
 				1AD17BEE2492907C00B1112E /* Assets.xcassets */,
 				1AD17BF02492907C00B1112E /* LaunchScreen.storyboard */,
@@ -99,6 +114,15 @@
 			path = "instagram-like-feed-appTests";
 			sourceTree = "<group>";
 		};
+		868C93D498B9B42E5DB5CFD3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC2118D95D75B8DC78316FD7 /* Pods-instagram-like-feed-app.debug.xcconfig */,
+				142325198E00D2AA62D1995F /* Pods-instagram-like-feed-app.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +130,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1AD17C012492907D00B1112E /* Build configuration list for PBXNativeTarget "instagram-like-feed-app" */;
 			buildPhases = (
+				F2120B5B249FF014B2A1FFFF /* [CP] Check Pods Manifest.lock */,
 				1AD17BDE2492907800B1112E /* Sources */,
 				1AD17BDF2492907800B1112E /* Frameworks */,
 				1AD17BE02492907800B1112E /* Resources */,
+				6A7E070417B30D04572187E1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,12 +221,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6A7E070417B30D04572187E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-instagram-like-feed-app/Pods-instagram-like-feed-app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-instagram-like-feed-app/Pods-instagram-like-feed-app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-instagram-like-feed-app/Pods-instagram-like-feed-app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2120B5B249FF014B2A1FFFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-instagram-like-feed-app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1AD17BDE2492907800B1112E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AD17BEA2492907800B1112E /* ViewController.swift in Sources */,
+				1AD17BEA2492907800B1112E /* FeedViewController.swift in Sources */,
 				1AD17BE62492907800B1112E /* AppDelegate.swift in Sources */,
 				1AD17BE82492907800B1112E /* SceneDelegate.swift in Sources */,
 			);
@@ -360,6 +428,7 @@
 		};
 		1AD17C022492907D00B1112E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC2118D95D75B8DC78316FD7 /* Pods-instagram-like-feed-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +447,7 @@
 		};
 		1AD17C032492907D00B1112E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 142325198E00D2AA62D1995F /* Pods-instagram-like-feed-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
