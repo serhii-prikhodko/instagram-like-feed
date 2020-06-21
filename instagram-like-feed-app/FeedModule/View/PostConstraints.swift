@@ -9,7 +9,7 @@
 import Foundation
 import SnapKit
 
-extension FeedViewController {
+extension PostTableViewCell {
     
     // MARK: Constraints functions
     func setupConstraints() {
@@ -30,7 +30,7 @@ extension FeedViewController {
     }
     func setupPostTopBar() {
         self.postTopBarView.snp.makeConstraints { (make) in
-            make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.leading.trailing.equalTo(contentView.safeAreaLayoutGuide)
             make.top.equalTo(0)
             make.height.equalTo(50)
         }

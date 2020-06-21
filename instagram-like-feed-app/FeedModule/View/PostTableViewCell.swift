@@ -1,17 +1,22 @@
 //
-//  ViewController.swift
+//  PostTableViewCell.swift
 //  instagram-like-feed-app
 //
-//  Created by Serhiy Prikhodko on 11.06.2020.
+//  Created by Serhiy Prikhodko on 18.06.2020.
 //  Copyright © 2020 Serhiy Prikhodko. All rights reserved.
 //
 
 import UIKit
-import SnapKit
 
-class FeedViewController: UIViewController {
+class PostTableViewCell: UITableViewCell {
     
     // MARK: Properties
+    static let identifier = "PostTableViewCell"
+    static func nib() -> UINib {
+        return UINib(nibName: "PostTableViewCell", bundle: nil)
+    }
+    
+    // MARK: Outlets
     lazy var userAvatarImageView: UIImageView = {
         let imageView = UIImageView(frame: .zero)
         imageView.layer.borderWidth = 1.0
@@ -45,7 +50,7 @@ class FeedViewController: UIViewController {
     lazy var viewContainer: UIView = {
         let uiView = UIView(frame: .zero)
         uiView.backgroundColor = .white
-        view.addSubview(uiView)
+        contentView.addSubview(uiView)
         
         return uiView
     }()
@@ -59,32 +64,20 @@ class FeedViewController: UIViewController {
     lazy var postImageBarView: UIView = {
         let uiView = UIView(frame: .zero)
         uiView.backgroundColor = .blue
-        view.addSubview(uiView)
+        contentView.addSubview(uiView)
         
         return uiView
     }()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.setupConstraints()
-        self.edgesForExtendedLayout = []
-        self.prepareNavigationButtons()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    func prepareNavigationButtons() {
-        // Set bar button items for navigation controller
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named:"camera_icon"), style: .plain, target: self, action: #selector(cameraButtonTapped))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named:"direct_icon"), style: .plain, target: self, action: #selector(directButtonTapped))
-        
-        //Set instagram logo as navigation bar title
-        let logo = UIImage(named: "instagram_logo")
-        let imageView = UIImageView(image:logo)
-        self.navigationItem.titleView = imageView
-    }
-    @objc func cameraButtonTapped() {}
-    @objc func directButtonTapped() {}
-}
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.setupConstraints()
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
+}
