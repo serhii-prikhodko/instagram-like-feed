@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "code": 200
+  },
+  "data": [
+    {
+      "comments": [
+        {
+          "username": "mike_smith",
+          "profile_picture": "sad-boy-35-2",
+          "id": 232323,
+          "created_time": 1440495224,
+          "text": "nice photo"
+        }
+      ],
+      "tags": [
+        "marmaris",
+        "turkey",
+        "dhotel"
+      ],
+      "type": "image",
+      "location": "Stockholm, Sweden",
+      "created_time": 1440495224,
+      "images": [
+        {
+          "url": "post_photo1",
+          "width": 640,
+          "height": 640
+        }
+      ],
+      "user_has_liked": false,
+      "likes_counter": 32,
+      "id": "1059273174265936414_7563629",
+      "user": {
+        "username": "sam_carter",
+        "profile_picture": "sam_carter",
+        "id": "7563629",
+        "created_time": 1440495224,
+        "text": "#stockholm #architecture",
+        "full_name": "Sam Carter"
+      }
+    },
+    {
+      "comments": [
+        {
+          "username": "some_girl",
+          "profile_picture": "original_avatar",
+          "id": 232323,
+          "created_time": 1440495224,
+          "text": "nice photo"
+        }
+      ],
+      "tags": [
+        "marmaris",
+        "turkey",
+        "dhotel"
+      ],
+      "type": "image",
+      "location": "Cabo da Roca",
+      "created_time": 1440495224,
+      "images": [
+        {
+          "url": "post_photo2",
+          "width": 640,
+          "height": 640
+        }
+      ],
+      "user_has_liked": false,
+      "likes_counter": 32,
+      "id": "1059273174265936414_7563629",
+      "user": {
+        "username": "sert_mehmet",
+        "profile_picture": "sad-boy-35-2",
+        "id": "7563629",
+        "created_time": 1440495224,
+        "text": "This is very impressive place",
+        "full_name": "Mehmet Set"
+      }
+    }
+  ]
+}

@@ -24,9 +24,15 @@ struct Post: Codable {
     var user: User?
     
     enum CodingKeys : String, CodingKey {
+        case comments
+        case tags
+        case location
         case createdTime = "created_time"
+        case images
         case userHasLiked = "user_has_liked"
+        case id
         case likesCounter = "likes_counter"
+        case user
     }
 }
 

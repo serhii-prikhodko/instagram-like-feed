@@ -13,16 +13,31 @@ class FeedViewController: UIViewController {
     
     //MARK: Properties
     var tableView: UITableView!
+    var presenter: FeedViewPresenterProtocol!
+    var cellID = "PostTableViewCellID"
         
     override func viewDidLoad() {
         super.viewDidLoad()
         self.edgesForExtendedLayout = []
         self.prepareNavigationButtons()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "PostTableViewCell")
+        self.prepareTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    func prepareTableView() {
+        self.tableView = UITableView(frame: .zero)
+        self.view.addSubview(tableView)
+        self.tableView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        self.tableView.register(PostTableViewCell.self, forCellReuseIdentifier: cellID)
+        //self.tableView.register(UINib(nibName: "PostTableViewCell", bundle: nil), forCellReuseIdentifier: cellID);
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.rowHeight = UITableView.automaticDimension
+        //self.tableView.estimatedRowHeight = 600
     }
     func prepareNavigationButtons() {
         // Set bar button items for navigation controller
@@ -41,11 +56,13 @@ class FeedViewController: UIViewController {
 extension FeedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 0
+        return self.presenter.posts?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! PostTableViewCell
+        let post = self.presenter.posts?[indexPath.row]
+        cell.update(with: post)
         
         return cell
     }
@@ -55,3 +72,12 @@ extension FeedViewController: UITableViewDelegate {
     
 }
 
+extension FeedViewController: FeedViewProtocol {
+    func success() {
+        tableView.reloadData()
+    }
+    
+    func failure(error: Error) {
+        print(error)
+    }
+}

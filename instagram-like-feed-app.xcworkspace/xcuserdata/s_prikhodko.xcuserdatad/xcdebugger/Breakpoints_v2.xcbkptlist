@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "3CDBF38A-A59A-44A6-9D66-0EA6665EF4CC"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CFFC4EF0-AA7F-43A7-A80D-ED722E94B248"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "instagram-like-feed-app/FeedModule/View/FeedViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "86EF5BEF-BD74-4E14-9529-A84FAED3C47C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "instagram-like-feed-app/FeedModule/Presenter/FeedViewPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "init(view:networkService:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "86EF5BEF-BD74-4E14-9529-A84FAED3C47C - 2401bd558da0f1c0"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "instagram_like_feed_app.FeedViewPresenter.getPosts() -&gt; ()"
+                  moduleName = "instagram-like-feed-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s_prikhodko/swift_code/instagram-like-feed-app/instagram-like-feed-app/FeedModule/Presenter/FeedViewPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  uuid = "86EF5BEF-BD74-4E14-9529-A84FAED3C47C - 305b7256905c963c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;instagram_like_feed_app.Posts&gt;, Swift.Error&gt;) -&gt; () in instagram_like_feed_app.FeedViewPresenter.getPosts() -&gt; ()"
+                  moduleName = "instagram-like-feed-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s_prikhodko/swift_code/instagram-like-feed-app/instagram-like-feed-app/FeedModule/Presenter/FeedViewPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "212">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CD9C0A42-BA24-42A2-9E91-BDB83C474A94"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "instagram-like-feed-app/FeedModule/Presenter/FeedViewPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "getPosts()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CD9C0A42-BA24-42A2-9E91-BDB83C474A94 - c2e5be0053d65501"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Result&lt;Swift.Optional&lt;instagram_like_feed_app.Posts&gt;, Swift.Error&gt;) -&gt; () in instagram_like_feed_app.FeedViewPresenter.getPosts() -&gt; ()"
+                  moduleName = "instagram-like-feed-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s_prikhodko/swift_code/instagram-like-feed-app/instagram-like-feed-app/FeedModule/Presenter/FeedViewPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "CD9C0A42-BA24-42A2-9E91-BDB83C474A94 - c2e5be0053d65501"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Result&lt;Swift.Optional&lt;instagram_like_feed_app.Posts&gt;, Swift.Error&gt;) -&gt; () in instagram_like_feed_app.FeedViewPresenter.getPosts() -&gt; ()"
+                  moduleName = "instagram-like-feed-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s_prikhodko/swift_code/instagram-like-feed-app/instagram-like-feed-app/FeedModule/Presenter/FeedViewPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "178">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C4251B09-DA25-4BF9-BFCE-E977A782C759"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "instagram-like-feed-app/ServiceLayer/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "loadFeedData(complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "64C3BB71-D7D9-43CB-BF31-563EBC1A98AC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "instagram-like-feed-app/FeedModule/View/FeedViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B26C36FF-C2BB-4781-A319-6CC1FEA98FD0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "instagram-like-feed-app/FeedModule/View/FeedViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

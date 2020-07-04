@@ -11,10 +11,7 @@ import UIKit
 class PostTableViewCell: UITableViewCell {
     
     // MARK: Properties
-    static let identifier = "PostTableViewCell"
-    static func nib() -> UINib {
-        return UINib(nibName: "PostTableViewCell", bundle: nil)
-    }
+    var presenter: PostCellPresenter!
     
     // MARK: Outlets
     lazy var userAvatarImageView: UIImageView = {
@@ -22,8 +19,8 @@ class PostTableViewCell: UITableViewCell {
         imageView.layer.borderWidth = 1.0
         imageView.layer.borderColor = UIColor.gray.cgColor
         imageView.backgroundColor = .green
-        imageView.layer.masksToBounds = false
         imageView.layer.cornerRadius = 20
+        imageView.clipsToBounds = true
         self.postTopBarView.addSubview(imageView)
         
         return imageView
@@ -31,7 +28,6 @@ class PostTableViewCell: UITableViewCell {
     lazy var userNameLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.textAlignment = .left
-        label.text = "sergey_privet"
         label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         self.postTopBarView.addSubview(label)
         
@@ -40,7 +36,6 @@ class PostTableViewCell: UITableViewCell {
     lazy var postLocationLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.textAlignment = .left
-        label.text = "Dnipro City Center"
         label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         //label.font = UIFont(name: "Chalkboard SE Regular 25.0", size: 12)
         self.postTopBarView.addSubview(label)
@@ -68,16 +63,37 @@ class PostTableViewCell: UITableViewCell {
         
         return uiView
     }()
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.setupConstraints()
-    }
-
+    lazy var postUIImageView: UIImageView = {
+        let imageView = UIImageView(frame: .zero)
+        imageView.backgroundColor = .gray
+        self.postImageBarView.addSubview(imageView)
+        
+        return imageView
+        
+    }()
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
+    
+    // MARK: Functions
+    func update(with post: Post?) {
+        self.setupConstraints()
+        if let post = post {
+            self.userNameLabel.text = post.user?.userName
+            self.postLocationLabel.text = post.location
+            self.userAvatarImageView.image = UIImage(named: post.user?.profilePicture ?? "")
+            self.postUIImageView.image = UIImage(named: post.images?[0].url ?? "")
+        }
+    }
+}
 
+extension PostTableViewCell: PostCellProtocol {
+    func getImage(post: Post?) {
+        if let data = self.presenter.imageData {
+            self.postUIImageView.image = UIImage(data: data)
+        }
+    }
 }
