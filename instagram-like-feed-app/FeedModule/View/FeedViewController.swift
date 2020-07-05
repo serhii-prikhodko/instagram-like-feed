@@ -36,8 +36,7 @@ class FeedViewController: UIViewController {
         //self.tableView.register(UINib(nibName: "PostTableViewCell", bundle: nil), forCellReuseIdentifier: cellID);
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.tableView.rowHeight = UITableView.automaticDimension
-        //self.tableView.estimatedRowHeight = 600
+        //self.tableView.rowHeight = UITableView.automaticDimension
     }
     func prepareNavigationButtons() {
         // Set bar button items for navigation controller

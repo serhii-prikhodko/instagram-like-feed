@@ -17,16 +17,19 @@ extension PostTableViewCell {
         self.setupPostTopBar()
         self.setupUserAvatar()
         self.setupUserName()
+        self.setupMoreButton()
         self.setupPostLocation()
         self.setupPostImageBar()
         self.setupImageUIImageView()
+        self.setupPostBottomBar()
+        self.setupPostBottomBarButtons()
     }
     func setupContainerView() {
         self.viewContainer.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview().labeled("viewContainerEdges")
+            make.edges.equalToSuperview().priority(999).labeled("viewContainerEdges")
             make.centerX.equalToSuperview().labeled("viewContainerCenterX")
             make.centerY.equalToSuperview().labeled("viewContainerCenterY")
-            make.height.equalTo(400).labeled("viewContainerHeight")
+            make.height.equalTo(420).labeled("viewContainerHeight")
         }
         self.viewContainer.backgroundColor = .white
     }
@@ -59,17 +62,60 @@ extension PostTableViewCell {
             make.left.equalTo(self.userAvatarImageView.snp.right).offset(5).labeled("postLocationLabelLeft")
         }
     }
+    func setupMoreButton() {
+        self.moreButton.snp.makeConstraints { (make) in
+            make.centerY.equalToSuperview().labeled("moreButtonCenterY")
+            make.width.equalTo(13).labeled("moreButtonWidth")
+            make.height.equalTo(3).labeled("moreButtonHeight")
+            make.trailing.equalTo(-5).labeled("moreButtonTrailing")
+        }
+    }
     func setupPostImageBar() {
         self.postImageBarView.snp.makeConstraints { (make) in
             make.top.equalTo(self.postTopBarView.snp.bottom).labeled("postImageBarViewTop")
             make.trailing.leading.equalToSuperview().labeled("postImageBarViewTrailingAndLeading")
-            //make.height.equalTo(40)
         }
     }
     func setupImageUIImageView() {
         self.postUIImageView.snp.makeConstraints { (make) in
             make.trailing.leading.equalToSuperview().labeled("postUIImageViewTrailingAndLeading")
             make.height.equalTo(320).labeled("postUIImageViewHeight")
+        }
+    }
+    func setupPostBottomBar() {
+        self.postBottomBarView.snp.makeConstraints { (make) in
+            make.leading.trailing.equalTo(contentView.safeAreaLayoutGuide).labeled("postBottomBarViewTrailingAndLeading")
+            make.bottom.equalTo(0).labeled("postBottomBarViewTop")
+            make.height.equalTo(50).labeled("postBottomBarViewHeight")
+        }
+    }
+    func setupPostBottomBarButtons() {
+        // Setup like button constraints
+        self.likeButton.snp.makeConstraints { (make) in
+            make.centerY.equalToSuperview().labeled("likeButtonCenterY")
+            make.leading.equalTo(5).labeled("likeButtonLeading")
+            make.width.height.equalTo(40).labeled("likeButtonWidthAndHeight")
+        }
+        
+        // Setup comment button constraints
+        self.commentButton.snp.makeConstraints { (make) in
+            make.centerY.equalToSuperview().labeled("commentButtonCenterY")
+            make.left.equalTo(self.likeButton.snp.right).labeled("commentButtonLeft")
+            make.width.height.equalTo(40).labeled("commentButtonWidthAndHeight")
+        }
+        
+        // Setup message button constraints
+        self.sendMessageButton.snp.makeConstraints { (make) in
+            make.centerY.equalToSuperview().labeled("sendMessageButtonCenterY")
+            make.left.equalTo(self.commentButton.snp.right).labeled("sendMessageButtonLeft")
+            make.width.height.equalTo(40).labeled("sendMessageButtonWidthAndHeight")
+        }
+        
+        // Setup collect button constraints
+        self.collectButton.snp.makeConstraints { (make) in
+            make.centerY.equalToSuperview().labeled("collectButtonCenterY")
+            make.right.equalTo(-5).labeled("collectButtonLeft")
+            make.width.height.equalTo(40).labeled("collectButtonWidthAndHeight")
         }
     }
 }

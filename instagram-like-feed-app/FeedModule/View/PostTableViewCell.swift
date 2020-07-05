@@ -42,6 +42,13 @@ class PostTableViewCell: UITableViewCell {
         
         return label
     }()
+    lazy var moreButton: UIButton = {
+        let button = UIButton(frame: .zero)
+        button.setImage(UIImage(named: "more_button"), for: .normal)
+        self.postTopBarView.addSubview(button)
+        
+        return button
+    }()
     lazy var viewContainer: UIView = {
         let uiView = UIView(frame: .zero)
         uiView.backgroundColor = .white
@@ -50,6 +57,13 @@ class PostTableViewCell: UITableViewCell {
         return uiView
     }()
     lazy var postTopBarView: UIView = {
+        let uiView = UIView(frame: .zero)
+        uiView.backgroundColor = .white
+        self.viewContainer.addSubview(uiView)
+        
+        return uiView
+    }()
+    lazy var postBottomBarView: UIView = {
         let uiView = UIView(frame: .zero)
         uiView.backgroundColor = .white
         self.viewContainer.addSubview(uiView)
@@ -70,6 +84,34 @@ class PostTableViewCell: UITableViewCell {
         
         return imageView
         
+    }()
+    lazy var likeButton: UIButton = {
+        let button = UIButton(frame: .zero)
+        button.setImage(UIImage(named: "like_button_filled"), for: .normal)
+        self.postBottomBarView.addSubview(button)
+        
+        return button
+    }()
+    lazy var commentButton: UIButton = {
+        let button = UIButton(frame: .zero)
+        button.setImage(UIImage(named: "comment_button"), for: .normal)
+        self.postBottomBarView.addSubview(button)
+        
+        return button
+    }()
+    lazy var sendMessageButton: UIButton = {
+        let button = UIButton(frame: .zero)
+        button.setImage(UIImage(named: "send_message_button"), for: .normal)
+        self.postBottomBarView.addSubview(button)
+        
+        return button
+    }()
+    lazy var collectButton: UIButton = {
+        let button = UIButton(frame: .zero)
+        button.setImage(UIImage(named: "collect_button"), for: .normal)
+        self.postBottomBarView.addSubview(button)
+        
+        return button
     }()
     
     override func setSelected(_ selected: Bool, animated: Bool) {
