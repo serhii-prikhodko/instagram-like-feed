@@ -174,8 +174,8 @@
             filePath = "instagram-like-feed-app/FeedModule/View/PostTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "moreButton"
             landmarkType = "24">
          </BreakpointContent>

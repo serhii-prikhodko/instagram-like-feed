@@ -22,14 +22,15 @@ extension PostTableViewCell {
         self.setupPostImageBar()
         self.setupImageUIImageView()
         self.setupPostBottomBar()
-        self.setupPostBottomBarButtons()
+        self.setupPostBottomBarItems()
+        self.setupPostCommentsView()
     }
     func setupContainerView() {
         self.viewContainer.snp.makeConstraints { (make) in
             make.edges.equalToSuperview().priority(999).labeled("viewContainerEdges")
             make.centerX.equalToSuperview().labeled("viewContainerCenterX")
             make.centerY.equalToSuperview().labeled("viewContainerCenterY")
-            make.height.equalTo(420).labeled("viewContainerHeight")
+            make.height.equalTo(437).labeled("viewContainerHeight")
         }
         self.viewContainer.backgroundColor = .white
     }
@@ -86,36 +87,48 @@ extension PostTableViewCell {
         self.postBottomBarView.snp.makeConstraints { (make) in
             make.leading.trailing.equalTo(contentView.safeAreaLayoutGuide).labeled("postBottomBarViewTrailingAndLeading")
             make.bottom.equalTo(0).labeled("postBottomBarViewTop")
-            make.height.equalTo(50).labeled("postBottomBarViewHeight")
+            make.height.equalTo(67).labeled("postBottomBarViewHeight")
         }
     }
-    func setupPostBottomBarButtons() {
+    func setupPostBottomBarItems() {
         // Setup like button constraints
         self.likeButton.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview().labeled("likeButtonCenterY")
+            make.top.equalToSuperview().offset(5).labeled("likeButtonTop")
             make.leading.equalTo(5).labeled("likeButtonLeading")
             make.width.height.equalTo(40).labeled("likeButtonWidthAndHeight")
         }
         
         // Setup comment button constraints
         self.commentButton.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview().labeled("commentButtonCenterY")
+            make.top.equalToSuperview().offset(5).labeled("commentButtonTop")
             make.left.equalTo(self.likeButton.snp.right).labeled("commentButtonLeft")
             make.width.height.equalTo(40).labeled("commentButtonWidthAndHeight")
         }
         
         // Setup message button constraints
         self.sendMessageButton.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview().labeled("sendMessageButtonCenterY")
+            make.top.equalToSuperview().offset(5).labeled("sendMessageButtonTop")
             make.left.equalTo(self.commentButton.snp.right).labeled("sendMessageButtonLeft")
             make.width.height.equalTo(40).labeled("sendMessageButtonWidthAndHeight")
         }
         
         // Setup collect button constraints
         self.collectButton.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview().labeled("collectButtonCenterY")
+            make.top.equalToSuperview().offset(5).labeled("collectButtonTop")
             make.right.equalTo(-5).labeled("collectButtonLeft")
             make.width.height.equalTo(40).labeled("collectButtonWidthAndHeight")
+        }
+        
+        // Setup collect like counter label constraints
+        self.likeCounterLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.likeButton.snp.bottom).offset(5).labeled("likeCounterLabelTop")
+            make.left.equalTo(5).labeled("likeCounterLabelLeft")
+        }
+    }
+    func setupPostCommentsView() {
+        self.postCommentsView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.postBottomBarView.snp.bottom).labeled("postCommentsViewTop")
+            make.left.right.equalToSuperview().labeled("postCommentsViewLeftAndRigth")
         }
     }
 }

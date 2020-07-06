@@ -37,7 +37,6 @@ class PostTableViewCell: UITableViewCell {
         let label = UILabel(frame: .zero)
         label.textAlignment = .left
         label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
-        //label.font = UIFont(name: "Chalkboard SE Regular 25.0", size: 12)
         self.postTopBarView.addSubview(label)
         
         return label
@@ -113,12 +112,21 @@ class PostTableViewCell: UITableViewCell {
         
         return button
     }()
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    lazy var likeCounterLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.textAlignment = .left
+        label.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        self.postBottomBarView.addSubview(label)
         
-        // Configure the view for the selected state
-    }
+        return label
+    }()
+    lazy var postCommentsView: UIView = {
+        let uiView = UIView(frame: .zero)
+        uiView.backgroundColor = .white
+        self.viewContainer.addSubview(uiView)
+        
+        return uiView
+    }()
     
     // MARK: Functions
     func update(with post: Post?) {
@@ -128,6 +136,7 @@ class PostTableViewCell: UITableViewCell {
             self.postLocationLabel.text = post.location
             self.userAvatarImageView.image = UIImage(named: post.user?.profilePicture ?? "")
             self.postUIImageView.image = UIImage(named: post.images?[0].url ?? "")
+            self.likeCounterLabel.text = "\(post.likesCounter ?? 0) Likes"
         }
     }
 }
